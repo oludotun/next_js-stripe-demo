@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.STRIPE_SECRETE_KET!);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 export async function POST(req: NextRequest) {
     const payload = await req.text();
     const res = JSON.parse(payload);
@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
         const event = stripe.webhooks.constructEvent(
             payload,
             sig!,
-            process.env.STRIPE_WEBHOOK_SECRETE!
+            process.env.STRIPE_WEBHOOK_SECRET!
         );
         const obj = res?.data?.object;
         const responseData = {
