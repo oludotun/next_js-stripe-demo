@@ -60,13 +60,6 @@ export default function Home() {
                 </ol>
 
                 <div className="flex gap-4 items-center flex-col sm:flex-row">
-                    <a
-                        className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-                        href={process.env.NEXT_PUBLIC_PAYMENT_LINK}
-                        rel="noopener noreferrer"
-                    >
-                        Pay with Payment Link
-                    </a>
                     <form action="/api/checkout_sessions" method="POST">
                         <button
                             type="submit"
@@ -76,6 +69,13 @@ export default function Home() {
                             Pay Now (Checkout)
                         </button>
                     </form>
+                    <a
+                        className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+                        href={process.env.NEXT_PUBLIC_PAYMENT_LINK}
+                        rel="noopener noreferrer"
+                    >
+                        Pay with Payment Link
+                    </a>
                 </div>
             </main>
             <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
