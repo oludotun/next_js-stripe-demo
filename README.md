@@ -2,6 +2,10 @@
 
 This demo project showcases how to integrate Stripe Payment API with a Next.js application.
 
+## Live Demo
+
+You can view the live demo [here https://next-js-stripe-demo.vercel.app/](https://next-js-stripe-demo.vercel.app/)
+
 ## Features
 
 -   Server-side API route integration with Stripe
